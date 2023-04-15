@@ -12,9 +12,9 @@ class logInPage {
     loginerrorMessage(){
         return 'Invalid credentials'
     }
-    loginWithCred(username, password){
-        cy.get(this.userNameInputField()).type(username);
-        cy.get(this.passwordInputField()).type(password);
+    loginWithCred(){
+        cy.get(this.userNameInputField()).type(Cypress.env('userName1'));
+        cy.get(this.passwordInputField()).type(Cypress.env('password1'));
         cy.get(this.clickLoginButton()).click();
 
     }

@@ -3,7 +3,7 @@ import dashboard from "../pageobject/dashboard/dashboard.po";
  describe('login ', () => {
    beforeEach(()=> {
     cy.visit('/');
-    login.loginWithCred(Cypress.env('userName1'),Cypress.env('password1'));
+    login.loginWithCred();
    })
    
     it('should see dashboard', () => {
